@@ -1,0 +1,158 @@
+/* =========================
+   CSS VARIABLES (THEME)
+========================= */
+:root {
+    --primary-color: #004b87;     /* Deep blue */
+    --secondary-color: #f2a900;   /* Gold */
+    --accent-color: #00a6a6;      
+    --light-bg: #f4f7fb;          
+    --card-bg: #ffffff;           
+    --text-color: #333333;
+    --footer-bg: #002f5f;
+    --font-main: Arial, sans-serif;
+}
+
+/* =========================
+   GENERAL STYLES
+========================= */
+body {
+    font-family: var(--font-main);
+    margin: 0;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+/* =========================
+   HEADER Stlyinng
+========================= */
+header {
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--accent-color)
+    );
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+/* =========================
+   UI NAVIGATION For page
+========================= */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    padding: 12px;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* =========================
+   MAIN CONTENT SECTIONS For PAge
+========================= */
+section {
+    background-color: var(--card-bg);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    border-left: 6px solid var(--accent-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   PROFILE IMAGE 
+========================= */
+.profile-img {
+    width: 200px;
+    border-radius: 50%;
+    border: 4px solid var(--secondary-color);
+    display: block;
+    margin: 15px auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   LISTS
+========================= */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: var(--footer-bg);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (min-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 950px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    section {
+        width: 45%;
+    }
+}
